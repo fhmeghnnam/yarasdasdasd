@@ -32,8 +32,6 @@ var table = require('table').table
 var ti={}  
 ,spee={}
 ,attentions={};
-
-const Discord = require('discord.js');
 const A7MD = new Discord.Client();
 
 console.log("BOT ONLINE");
