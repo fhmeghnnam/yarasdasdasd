@@ -33,29 +33,22 @@ var ti={}
 ,spee={}
 ,attentions={};
 
-client.on('message', message => {
-    var prefix = ".";
-    
-        if (message.author.id === client.user.id) return;
-        if (message.guild) {
-        let args = message.content.split(' ').slice(1).join(' ');
-    if(message.content.split(' ')[0] == prefix + 'bc') {
-       if(!message.member.hasPermission('ADMINISTRATOR')) return;
+const Discord = require('discord.js');
+const A7MD = new Discord.Client();
 
-        if (!args[1]) {
-    message.channel.send("**!bc <message>**");
-    return;
-    }
-            message.guild.members.forEach(m => {
-       var bc = new Discord.RichEmbed()
-       .addField( `${message.guild.name}`)
-       .addField('From : ', `${message.author.username}`)
-       .addField(' Message ', args)
-       .setColor('#ff0000')
-       m.send(`${m}`,{embed: bc});
-            });
-        }
-        } else {
-            return;
-        }
-    });
+console.log("BOT ONLINE");
+ 
+A7MD.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(` 
+ **
+ أن الحياة تشبه كثيراً مباراة للملاكمة ، لا يهم إذا خسرت 14 جولة ، كل ما عليك هو أن تسقط منافسك بالضربة القاضية خلال ثوان ، وبذك تكون الفائز الأوحد .
+( الأصدقاء الحقيقون يصعب إيجادهم، يصعب تركهم، 
+ويستحيل نسيانهم هل ستكون صديقا من ذول معنا )
+تفضل معنا :heart:
+https://discord.gg/ue85Kmh
+**
+`) 
+}).catch(console.error)
+})
+client.login(process.env.BOT_TOKEN)
