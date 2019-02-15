@@ -23,11 +23,10 @@ npm install simple-youtube-api
 npm install queue
 */
 
-client.on('ready', () => {//the ready msgs
-    console.log(`Logged in as ${client.user.tag}!`);
-    console.log(`in ${client.guilds.size} servers `)
-    console.log(`[ ] ${client.users.size}`)
-});
+
+    
+    
+    
 
 client.on('message', async msg => {
 	if (msg.author.bot) return undefined;
