@@ -32,21 +32,10 @@ var table = require('table').table
 var ti={}  
 ,spee={}
 ,attentions={};
-const A7MD = new Discord.Client();
 
-console.log("BOT ONLINE");
- 
-A7MD.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(` 
- **
- أن الحياة تشبه كثيراً مباراة للملاكمة ، لا يهم إذا خسرت 14 جولة ، كل ما عليك هو أن تسقط منافسك بالضربة القاضية خلال ثوان ، وبذك تكون الفائز الأوحد .
-( الأصدقاء الحقيقون يصعب إيجادهم، يصعب تركهم، 
-ويستحيل نسيانهم هل ستكون صديقا من ذول معنا )
-تفضل معنا :heart:
-https://discord.gg/ue85Kmh
-**
-`) 
-}).catch(console.error)
-})
+client.on('ready', () => {
+var x = client.channels.get("545326026062823434");
+if (x) x.join();
+});
+
 client.login(process.env.BOT_TOKEN)
