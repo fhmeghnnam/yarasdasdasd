@@ -7,7 +7,7 @@ const prefix = "$"; //تعريف البرفك
 
 
 client.on("ready", () => {
-  const channel = client.channels.get("555871258361856000");
+  const channel = client.channels.get("445780572640509962");
   if (!channel) return console.error("The channel does not exist!");
   channel.join().then(connection => {
     // Yay, it worked!
