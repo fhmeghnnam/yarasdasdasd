@@ -4,9 +4,10 @@ const client = new Discord.Client();
 const prefix = "!";
 
 
-    client.on("messageReactionAdd", reac => {
+    client.on("messageReactionAdd", (reac, user)=> {
+
     
-      let member = reac.message.member
+      let member = reac.message.guild.member(user);
 
       let rolemember = reac.message.guild.roles.find("name", "member");
 
