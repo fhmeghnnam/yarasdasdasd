@@ -9,7 +9,7 @@ const prefix = "!";
     
       let member = reac.message.guild.member(user);
 
-      let rolemember = reac.message.guild.roles.find("name", "Member");
+      let rolemember = reac.message.guild.roles.find("name", "member");
 
       
         if(member.hasPermission("ADMINISTRATOR")) return ;
