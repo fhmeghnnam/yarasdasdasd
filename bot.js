@@ -13,7 +13,7 @@ const prefix = "!";
 
       
         if(member.hasPermission("ADMINISTRATOR")) return ;
-        if(member.roles.has(rolemember)) return ;
+        if(member.roles.find(x=> x.id === rolemember.id)) return ; 
         member.addRole('612635039242649600');
       
 
