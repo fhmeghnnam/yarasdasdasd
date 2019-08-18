@@ -1,13 +1,12 @@
 
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "!";
-const token = "Token Here";              //    Token Here
+const prefix = "!";          //    Token Here
 //    Add emoji name
-var emojiname = [":Yes:"];
+var emojiname = [""✅""];
 
 //    Add role name
-var rolename=["Member"];
+var rolename=[""Member""];
 
 
 client.on('ready', () => {
@@ -58,4 +57,3 @@ client.on("messageReactionRemove",(reaction,user)=>{
 
 client.login(process.env.BOT_TOKEN);
 
-client.login(process.env.BOT_TOKEN)
