@@ -9,12 +9,12 @@ const prefix = "!";
     
       let member = reac.message.guild.member(user);
 
-      let rolemember = reac.message.guild.roles.find("name", "member");
+      let rolemember = reac.message.guild.roles.find("name", "Member");
 
       
         if(member.hasPermission("ADMINISTRATOR")) return ;
         if(member.roles.find(x=> x.id === rolemember.id)) return ; 
-        member.addRole('612635039242649600');
+        member.addRole('612601847634591753');
       
 
     })
