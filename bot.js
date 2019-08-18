@@ -3,37 +3,21 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!";
 
-//    Token Here
-client.on("messageReactionAdd", (reaction, user) => {
-  if (user.bot) return;
-  const member = reaction.message.member
-  switch (reaction.name) {
-    case "✅":
-    member.addRole("612601847634591753").then((res) => {
-      
-     
-    }).catch(console.error);
-    break;
-  
-  };
-})
 
-client.on("messageReactionRemove", (reaction, user) => {
-  if (user.bot) return;
-  const member = reaction.message.member
-  switch (reaction.name) {
-    case "✅":
-    member.removeRole("612601847634591753").then((res) => {
-      // You can do something like this, or nothing at all. Your choice.
-      reaction.message.channel.send(`You've been removed from the \`${res.name}\` role!`)
-    }).catch(console.error);
-    break;
-    case "emoji_name_2":
-    member.removeRole("someOtherRole").then((res) => {
+    client.on("messageReactionAdd", reac => {
+    
+      let member = reac.message.member
+
+      let rolemember = reac.message.guild.roles.find("name", "member");
+
       
-    }).catch(console.error);
-  };
-})
+        if(member.hasPermission("ADMINISTRATOR")) return ;
+        if(member.roles.has(rolemember)) return ;
+        member.addRole('612601847634591753');
+      
+
+    })
+
 
 client.login(process.env.BOT_TOKEN);
 
