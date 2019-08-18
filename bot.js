@@ -14,7 +14,7 @@ const prefix = "!";
       
         if(member.hasPermission("ADMINISTRATOR")) return ;
         if(member.roles.has(rolemember)) return ;
-        member.addRole('612601847634591753');
+        member.addRole('612635039242649600');
       
 
     })
