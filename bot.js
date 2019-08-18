@@ -8,7 +8,7 @@ client.on("messageReactionAdd", (reaction, user) => {
   if (user.bot) return;
   const member = reaction.message.member
   switch (reaction.name) {
-    case "white_check_mark":
+    case "✅":
     member.addRole("612601847634591753").then((res) => {
       
      
@@ -22,7 +22,7 @@ client.on("messageReactionRemove", (reaction, user) => {
   if (user.bot) return;
   const member = reaction.message.member
   switch (reaction.name) {
-    case "white_check_mark":
+    case "✅":
     member.removeRole("612601847634591753").then((res) => {
       // You can do something like this, or nothing at all. Your choice.
       reaction.message.channel.send(`You've been removed from the \`${res.name}\` role!`)
