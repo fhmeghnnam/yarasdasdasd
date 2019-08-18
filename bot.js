@@ -3,7 +3,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!";          //    Token Here
 //    Add emoji name
-var emojiname = [""✅""];
 
 //    Add role name
 client.on("messageReactionAdd", function(users) {
