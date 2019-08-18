@@ -1,8 +1,10 @@
 
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "!";          //    Token Here
-<CLient>.on("messageReactionAdd", (reaction, user) => {
+const prefix = "!";
+
+//    Token Here
+client.on("messageReactionAdd", (reaction, user) => {
   if (user.bot) return;
   const member = reaction.message.member
   switch (reaction.name) {
@@ -16,7 +18,7 @@ const prefix = "!";          //    Token Here
   };
 })
 
-<CLient>.on("messageReactionRemove", (reaction, user) => {
+client.on("messageReactionRemove", (reaction, user) => {
   if (user.bot) return;
   const member = reaction.message.member
   switch (reaction.name) {
